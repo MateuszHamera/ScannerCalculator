@@ -32,12 +32,12 @@ namespace ScannerCalculator
             containerBuilder.RegisterType<ScannerInformationsView>();
             containerBuilder.RegisterType<ScannerSuggestionsView>();
 
-            containerBuilder.RegisterType<MainWindow>();
-            containerBuilder.RegisterType<MainWindowViewModel>();
+            containerBuilder.RegisterType<Shell>();
+            containerBuilder.RegisterType<ShellViewModel>();
 
             var container = containerBuilder.Build();
-            var mainWindow = container.Resolve<MainWindow>();
-            mainWindow.Show();
+            var shell = container.Resolve<Shell>();
+            shell.Show();
         }
     }
 }

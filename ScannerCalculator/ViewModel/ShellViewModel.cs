@@ -1,15 +1,8 @@
-﻿using ScannerCalculator.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ScannerCalculator
+﻿namespace ScannerCalculator.ViewModel
 {
-    public class MainWindowViewModel
+    public class ShellViewModel
     {
-        public MainWindowViewModel
+        public ShellViewModel
         (
             ScannerDataViewModel scannerDataViewModel,
             ScannerInformationsViewModel scannerInformationsViewModel,
@@ -21,8 +14,8 @@ namespace ScannerCalculator
             ScannerSuggestions = scannerSuggestionsViewModel;
         }
 
-        public ScannerDataViewModel ScannerData { get;}
+        public ScannerDataViewModel ScannerData { get; }
         public ScannerInformationsViewModel ScannerInformations { get; }
-        public ScannerSuggestionsViewModel  ScannerSuggestions{ get; }
+        public ScannerSuggestionsViewModel ScannerSuggestions { get; }
     }
 }
