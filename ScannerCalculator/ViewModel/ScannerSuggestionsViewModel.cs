@@ -11,11 +11,13 @@ namespace ScannerCalculator.ViewModel
     {
         public ScannerSuggestionsViewModel()
         {
+            Title = "Scanner Suggestions";
             Informations = "This is specjal section. Write scanner working space and distance beetween camera or camera angle and algorythm ";
         }
 
-        private string _informations;
+        public string Title { get; }
 
+        private string _informations;
         public string Informations
         {
             get => _informations;

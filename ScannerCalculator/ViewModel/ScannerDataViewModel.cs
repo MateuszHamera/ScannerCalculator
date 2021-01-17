@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prism.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,25 @@ using System.Threading.Tasks;
 
 namespace ScannerCalculator.ViewModel
 {
-    public class ScannerDataViewModel
+    public class ScannerDataViewModel : BindableBase
     {
         public ScannerDataViewModel()
         {
-
+            Title = "Scanner Data";
+            MinValue = 150;
+            MaxValue = 600;
+            ActualValue = 300;
         }
+
+        public string Title { get; }
+        public int MinValue { get; }
+
+        private int _actulaValue;
+        public int ActualValue
+        {
+            get => _actulaValue;
+            set => SetProperty(ref _actulaValue, value);
+        }
+        public int MaxValue { get; }
     }
 }

@@ -9,11 +9,17 @@
     <Grid>
         <ScrollViewer>
             <StackPanel Margin="5">
-                <local:ScannerDataView DataContext="{Binding ScannerData}"/>
+                <Expander Header="{Binding ScannerData.Title}">
+                    <local:ScannerDataView DataContext="{Binding ScannerData}"/>
+                </Expander>
                 <Separator/>
-                <local:ScannerInformationsView DataContext="{Binding ScannerInformations}"/>
+                <Expander Header="{Binding ScannerInformations.Title}">
+                    <local:ScannerInformationsView DataContext="{Binding ScannerInformations}"/>
+                </Expander>
                 <Separator/>
-                <local:ScannerSuggestionsView DataContext="{Binding ScannerSuggestions}"/>
+                <Expander Header="{Binding ScannerSuggestions.Title}">
+                    <local:ScannerSuggestionsView DataContext="{Binding ScannerSuggestions}"/>
+                </Expander>
             </StackPanel>
         </ScrollViewer>
     </Grid>
