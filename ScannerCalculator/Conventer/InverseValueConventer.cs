@@ -24,7 +24,14 @@ namespace ScannerCalculator.Conventer
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return null;
+            double min = 150;
+            double max = 600;
+            double  v = ((double)value - min) * 100;
+            double difference = max - min;
+            double a = difference / 100;
+            double percent = (double)v / difference;
+            double result = -a * percent + 600;
+            return result;
         }
     }
 }
