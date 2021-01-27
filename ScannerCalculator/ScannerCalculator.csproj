@@ -90,7 +90,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Conventer\InverseMarginConventer.cs" />
     <Compile Include="Conventer\InverseValueConventer.cs" />
+    <Compile Include="Conventer\MarginConventer.cs" />
     <Compile Include="Model\Scanner.cs" />
     <Compile Include="Model\ScannerInformations.cs" />
     <Compile Include="Model\ScannerInformationsCalculator.cs" />
@@ -165,6 +167,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Images\camera.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
