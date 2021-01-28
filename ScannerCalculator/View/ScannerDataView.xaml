@@ -31,6 +31,19 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <TextBlock Text="Select Camera"/>
+                <TextBlock Text="Select lens"/>
+            </StackPanel>
+            <StackPanel>
+
+            </StackPanel>
+        </Grid>
 
         <Image Source="{StaticResource ResourceKey=WorkingArea}"
                Grid.ColumnSpan="3"

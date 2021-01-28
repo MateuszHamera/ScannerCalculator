@@ -93,6 +93,12 @@
     <Compile Include="Conventer\InverseMarginConventer.cs" />
     <Compile Include="Conventer\InverseValueConventer.cs" />
     <Compile Include="Conventer\MarginConventer.cs" />
+    <Compile Include="Model\Camera.cs" />
+    <Compile Include="Model\CamersManager.cs" />
+    <Compile Include="Model\Interface\ICamersManager.cs" />
+    <Compile Include="Model\Interface\ILensesManager.cs" />
+    <Compile Include="Model\Lens.cs" />
+    <Compile Include="Model\LensesManager.cs" />
     <Compile Include="Model\Scanner.cs" />
     <Compile Include="Model\ScannerInformations.cs" />
     <Compile Include="Model\ScannerInformationsCalculator.cs" />
