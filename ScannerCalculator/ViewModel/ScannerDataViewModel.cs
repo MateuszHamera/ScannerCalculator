@@ -15,11 +15,11 @@ namespace ScannerCalculator.ViewModel
             MinValue = 150;
             MaxValue = 600;
             ActualValue = 300;
+            ActualAngle = 15;
         }
 
         public string Title { get; }
         public int MinValue { get; }
-
         private int _actulaValue;
         public int ActualValue
         {
@@ -27,5 +27,13 @@ namespace ScannerCalculator.ViewModel
             set => SetProperty(ref _actulaValue, value);
         }
         public int MaxValue { get; }
+
+        private int _actualAngle;
+        public int ActualAngle
+        {
+            get => _actualAngle;
+            set => SetProperty(ref _actualAngle, value);
+        }
+
     }
 }

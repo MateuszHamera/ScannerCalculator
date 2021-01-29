@@ -76,17 +76,27 @@
                 ToolTip="{Binding ActualValue}"
                 Width="450"
                 />
-        <TextBlock Grid.Row="4"
-                   Grid.Column="0"
-                   HorizontalAlignment="Center"
-                   >
+        <StackPanel HorizontalAlignment="Center"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    >
+            <TextBlock >
+            <Run Text="Distance: "/>
             <Run Text="{Binding ActualValue}"/>
             <Run Text=" mm"/>
-        </TextBlock>
+            </TextBlock>
+            <TextBlock >
+            <Run Text="Angle: "/>
+            <Run Text="{Binding ActualAngle}"/>
+            <Run Text=" degree"/>
+            </TextBlock>
+        </StackPanel>
+
         <TextBlock Grid.Row="4"
                    Grid.Column="3"
                    HorizontalAlignment="Center"
                    >
+            <Run Text="Distance: "/>
             <Run Text="{Binding ActualValue}"/>
             <Run Text=" mm"/>
         </TextBlock>
@@ -98,5 +108,23 @@
                 ToolTip="{Binding ActualValue}"
                 Width="450"
                 />
+        <Line Grid.Row="0"
+              Grid.Column="0"
+              Grid.ColumnSpan="1"
+              Grid.RowSpan="3"
+              X1="{Binding ActualValue, Converter={StaticResource InverseValueConventer}}" Y1="0"
+              X2="{Binding ActualValue, Converter={StaticResource InverseValueConventer}}" Y2="300"
+              StrokeThickness="5"
+              Stroke="Black"
+              ></Line>
+        <Line Grid.Row="0"
+              Grid.Column="3"
+              Grid.ColumnSpan="1"
+              Grid.RowSpan="3"
+              X1="{Binding ActualValue}" Y1="0"
+              X2="{Binding ActualValue}" Y2="300"
+              StrokeThickness="5"
+              Stroke="Black"
+              ></Line>
     </Grid>
 </UserControl>
