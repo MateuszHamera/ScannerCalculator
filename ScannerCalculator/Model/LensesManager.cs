@@ -1,16 +1,13 @@
 ﻿using ScannerCalculator.Model.Interface;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScannerCalculator.Model
 {
-    public class LensesManager : ILensesManager
+    public class LensesManager : IManager<Lens>
     {
         private List<Lens> Lenses { get; set; }
-        public void AddLens(Lens lens)
+        public void Add(Lens lens)
         {
             var existLens = Lenses.Where(x => x.Fnumber == lens.Fnumber
                                             && x.FocalLenght == lens.FocalLenght
@@ -23,19 +20,15 @@ namespace ScannerCalculator.Model
             Lenses.Add(lens);
         }
 
-        public void DeleteLens(Lens lens)
+        public void Delete(Lens lens)
+        {
+
+        }
+        public void Update(Lens lens)
         {
 
         }
 
-        public List<Lens> GetLenses()
-        {
-            return Lenses;
-        }
-
-        public void UpdateLens(Lens lens)
-        {
-
-        }
+        public List<Lens> GetList() => Lenses;
     }
 }

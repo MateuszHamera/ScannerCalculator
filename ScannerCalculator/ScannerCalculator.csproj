@@ -97,6 +97,7 @@
     <Compile Include="Model\CamersManager.cs" />
     <Compile Include="Model\Interface\ICamersManager.cs" />
     <Compile Include="Model\Interface\ILensesManager.cs" />
+    <Compile Include="Model\Interface\IManager.cs" />
     <Compile Include="Model\Lens.cs" />
     <Compile Include="Model\LensesManager.cs" />
     <Compile Include="Model\Scanner.cs" />
