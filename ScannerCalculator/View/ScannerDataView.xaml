@@ -31,31 +31,53 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Grid>
+        <Grid DataContext="{Binding ScannerData}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <StackPanel>
-                <TextBlock Text="Select Camera"/>
-                <TextBlock Text="Select lens"/>
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Select Camera"
+                           Margin="2"
+                           />
+                <TextBlock Text="Select lens"
+                           Margin="2"/>
             </StackPanel>
-            <StackPanel>
+            <StackPanel Grid.Column="1"
+                        >
+                <DataGrid x:Name="dataGrid"
+                          SelectedItem="{Binding SelectedCamera}"
+                          AutoGenerateColumns="True" CanUserAddRows="false"
+                      VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" RowHeight="20">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                
+                <ComboBox Margin="2"
+                          ItemsSource="{Binding Cameras}"  
+                          
+                          />
 
+                <ComboBox Margin="2"
+                          ItemsSource="{Binding Lenses}"
+                          SelectedValue="{Binding SelectedLens}"
+                          />
             </StackPanel>
         </Grid>
 
-        <Image Source="{StaticResource ResourceKey=WorkingArea}"
+        <!--<Image Source="{StaticResource ResourceKey=WorkingArea}"
                Grid.ColumnSpan="3"
                Width="500"
-               Height="200"/>
+               Height="200"/>-->
         <Image Source="{StaticResource ResourceKey=Camera}"
                Grid.Column="0"
+               Grid.ColumnSpan="2"
                Grid.Row="2"
                Width="50"
                Margin="{Binding ActualValue, Converter={StaticResource InverseMarginConventer}}"
                HorizontalAlignment="Left"
-               Panel.ZIndex="1"
+               Panel.ZIndex="0"
                >
             <Image.RenderTransform>
                 <RotateTransform Angle="{Binding ActualAngle}"/>
@@ -115,23 +137,5 @@
                 ToolTip="{Binding ActualValue}"
                 Width="450"
                 />
-        <Line Grid.Row="0"
-              Grid.Column="0"
-              Grid.ColumnSpan="1"
-              Grid.RowSpan="3"
-              X1="{Binding LeftLine.X1}" Y1="0"
-              X2="{Binding LeftLine.X2}" Y2="300"
-              StrokeThickness="5"
-              Stroke="Black"
-              ></Line>
-        <Line Grid.Row="0"
-              Grid.Column="3"
-              Grid.ColumnSpan="1"
-              Grid.RowSpan="3"
-              X1="{Binding RightLine.X1}" Y1="0"
-              X2="{Binding RightLine.X2}" Y2="300"
-              StrokeThickness="5"
-              Stroke="Black"
-              ></Line>
     </Grid>
 </UserControl>

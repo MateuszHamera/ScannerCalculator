@@ -11,7 +11,9 @@ namespace ScannerCalculator.ViewModel
         public ScannerInformationsViewModel()
         {
             Title = "Scanner Informations";
+            Informations = "Info";
         }
         public string Title { get; }
+        public string Informations { get; }
     }
 }

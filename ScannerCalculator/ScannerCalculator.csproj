@@ -94,21 +94,26 @@
     <Compile Include="Conventer\InverseValueConventer.cs" />
     <Compile Include="Conventer\MarginConventer.cs" />
     <Compile Include="Model\Camera.cs" />
-    <Compile Include="Model\CamersManager.cs" />
-    <Compile Include="Model\Interface\ICamersManager.cs" />
-    <Compile Include="Model\Interface\ILensesManager.cs" />
-    <Compile Include="Model\Interface\IManager.cs" />
+    <Compile Include="Model\ElementManager.cs" />
+    <Compile Include="Model\Interface\IDataManager.cs" />
+    <Compile Include="Model\Interface\IElement.cs" />
+    <Compile Include="Model\Interface\IElementManager.cs" />
     <Compile Include="Model\Lens.cs" />
-    <Compile Include="Model\LensesManager.cs" />
+    <Compile Include="Model\DataManager.cs" />
+    <Compile Include="Model\ModelsList.cs" />
     <Compile Include="Model\Scanner.cs" />
     <Compile Include="Model\ScannerInformations.cs" />
     <Compile Include="Model\ScannerInformationsCalculator.cs" />
     <Compile Include="Model\ScannerSuggestions.cs" />
     <Compile Include="Model\ScannerSuggestionsCalculator.cs" />
+    <Compile Include="ViewModel\ElementsConfigurationsViewModel.cs" />
     <Compile Include="ViewModel\ScannerDataViewModel.cs" />
     <Compile Include="ViewModel\ScannerInformationsViewModel.cs" />
     <Compile Include="ViewModel\ScannerSuggestionsViewModel.cs" />
     <Compile Include="ViewModel\ShellViewModel.cs" />
+    <Compile Include="View\ElementsConfigurationsView.xaml.cs">
+      <DependentUpon>ElementsConfigurationsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ScannerDataView.xaml.cs">
       <DependentUpon>ScannerDataView.xaml</DependentUpon>
     </Compile>
@@ -125,6 +130,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\ElementsConfigurationsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ScannerDataView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

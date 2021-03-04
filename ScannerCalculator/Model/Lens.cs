@@ -1,9 +1,12 @@
-﻿namespace ScannerCalculator.Model
+﻿using ScannerCalculator.Model.Interface;
+
+namespace ScannerCalculator.Model
 {
-    public class Lens
+    public class Lens : IElement
     {
-        public string Name { get; }
-        public int FocalLenght { get; }
-        public double Fnumber { get; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int FocalLenght { get; set; }
+        public double Fnumber { get; set; }
     }
 }

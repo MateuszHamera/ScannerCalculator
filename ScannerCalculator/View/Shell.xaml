@@ -20,6 +20,10 @@
                 <Expander Header="{Binding ScannerSuggestions.Title}">
                     <local:ScannerSuggestionsView DataContext="{Binding ScannerSuggestions}"/>
                 </Expander>
+                <Separator/>
+                <Expander Header="{Binding ElementsConfigurations.Title}">
+                    <local:ElementsConfigurationsView DataContext="{Binding ElementsConfigurations}"/>
+                </Expander>
             </StackPanel>
         </ScrollViewer>
     </Grid>
